@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input id="mytext" type="text" value="0">
+     <br>
+     <input type="button" value="C" onclick="cut()">
+     <input type="button" value="2" onclick="myfunction('2')">
+     <input type="button" value="0" onclick="myfunction('0')">
+     <input type="button" value="1" onclick="myfunction('1')">
+     <input type="button" value="3" onclick="myfunction('3')">
+     <input type="button" value="4" onclick="myfunction('4')">
+     <input type="button" value="5" onclick="myfunction('5')">
+     <input type="button" value="6" onclick="myfunction('6')">
+     <input type="button" value="7" onclick="myfunction('7')">
+     <input type="button" value="8" onclick="myfunction('8')">
+     <input type="button" value="9" onclick="myfunction('9')">
+     <input type="button" value="." onclick="myfunction('.')">
+     <input type="button" value="+" onclick="myfunction('+')">
+     <input type="button" value="=" onclick="output()">
+     <script>
+        var result=""
+        function myfunction(a)
+        {
+           let z=document.getElementById("mytext");
+           result=result+a;
+           z.value=result;
+
+        }
+        function output()
+        {
+            
+           let z=document.getElementById("mytext");
+           z.value=eval(result);
+        }
+        function cut()
+        {
+         result="";
+          console.log("value is",result);
+          
+          let z=document.getElementById("mytext");
+          z.value=result;
+
+        }
+
+     </script>
+
+</body>
+</html>
